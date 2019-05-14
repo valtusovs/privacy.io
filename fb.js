@@ -6,9 +6,9 @@ function logIn(){
         	person.userID = response.authResponse.userID;
         	person.accessToken = response.authResponse.accessToken;
         	FB.api('/me?fields = id,name,first_name,email,picture.type(large)',function(userData){
-        		console.log(userData)
-        	});
+        		console.log(userData);
+        	})
         }
-    })
+    },{scope: 'public_profile,email'})
 
 }
