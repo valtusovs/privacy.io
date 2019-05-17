@@ -42,20 +42,21 @@ function getInfo() {
         
         //artist.name = response.music.data[Math.floor(Math.random() * response.music.data.length)].name;
         artist.id = response.music.data[0].id;
+        const link_music = document.createElement('a')
+        const define_link = function(){
+            artist.name = artist.all_name[Math.floor(Math.random() * artist.all_name.length)];
+            console.log(artist.name)
+            link_music.href = `https://www.youtube.com/results?search_query=${artist.name}`;
+            link_music.target = '_blank';
+            link_music.text = 'Listen to music that you may like';
+            youtube = document.getElementById('youtube');
+            youtube.appendChild(link_music);
+        }
         
  })
 		
 		}
-const link_music = document.createElement('a')
-const define_link = function(){
-    artist.name = artist.all_name[Math.floor(Math.random() * artist.all_name.length)];
-        console.log(artist.name)
-        link_music.href = `https://www.youtube.com/results?search_query=${artist.name}`;
-        link_music.target = '_blank';
-        link_music.text = 'Listen to music that you may like';
-        youtube = document.getElementById('youtube');
-        youtube.appendChild(link_music);
-}
+
 
 define_link()
 
