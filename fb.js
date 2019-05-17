@@ -32,7 +32,7 @@ function login() {
 // getting basic user info
 var artist = {all_name:[],name :'',id:''}
 function getInfo() {
-    FB.api('/me', 'GET', {fields: `first_name,last_name,name,id,picture.width(150).height(150),email,location,hometown,music`}, 
+    FB.api('/me', 'GET', {fields: `first_name,last_name,name,id,picture.width(150).height(150),email,location,hometown,music,events`}, 
     function(response) {
         console.log(response)
         document.getElementById('status').innerHTML = "<img src='" + response.picture.data.url + "'>";
