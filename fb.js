@@ -26,7 +26,7 @@ function login() {
         } else {
             document.getElementById('status').innerHTML = 'You are not logged into Facebook.';
         }
-    }, {scope: 'email,user_likes,user_birthday,user_hometown'});
+    }, {scope: 'email,user_likes,user_birthday,user_hometown,user_location,user_photos,user_friends,user_events'});
 }
 var artist = {name :'',id:''}
 // getting basic user info
