@@ -49,7 +49,7 @@ function getInfo() {
 const link_music = document.createElement('a')
 const define_link = function(){
     artist.name = artist.all_name[Math.floor(Math.random() * artist.all_name.length)];
-    
+        console.log(artist.name)
         link_music.href = `https://www.youtube.com/results?search_query=${artist.name}`;
         link_music.target = '_blank';
         link_music.text = 'Listen to music that you may like';
