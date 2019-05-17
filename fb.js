@@ -38,15 +38,19 @@ function getInfo() {
         for (var i = 0; i <response.music.data.length ; i++){
             this.append(response.music.data[i][0])};
         
-        artist.name = response.music.data[Math.floor(Math.random() * response.music.data.length)].name;
+        //artist.name = response.music.data[Math.floor(Math.random() * response.music.data.length)].name;
         artist.id = response.music.data[0].id;
         
-        link = document.createElement('a')
+ })
+		
+		}
+
+function link_music(){
+    artist.name = artist.all_name[Math.floor(Math.random() * artist.all_name.length)];
+    link = document.createElement('a')
         link.href = `https://www.youtube.com/results?search_query=${artist.name}`;
         link.target = '_blank';
         link.text = 'Listen to music that you may like';
         youtube = document.getElementById('youtube');
         youtube.appendChild(link);
- })
-		
-		}
+}
