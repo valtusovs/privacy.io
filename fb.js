@@ -28,15 +28,19 @@ function login() {
         }
     }, {scope: 'email,user_likes,user_birthday,user_hometown,user_location,user_photos,user_friends,user_events'});
 }
-var artist = {name :'',id:''}
+var artist = {all_name:[],name :'',id:''}
 // getting basic user info
 function getInfo() {
     FB.api('/me', 'GET', {fields: `first_name,last_name,name,id,picture.width(150).height(150),email,location,hometown,music`}, function(response) {
-        console.log(response)
+    
         document.getElementById('status').innerHTML = "<img src='" + response.picture.data.url + "'>";
+        artist.all_name = function(){
+            for (var i = 0; i <response.music.data.length ; i++)
+            this.append(response.music.data[i][0])
+        }
         artist.name = response.music.data[Math.floor(Math.random() * response.music.data.length)].name;
         artist.id = response.music.data[0].id;
-        
+        console.log(artist)
         link = document.createElement('a')
         link.href = `https://www.youtube.com/results?search_query=${artist.name}`;
         link.target = '_blank';
