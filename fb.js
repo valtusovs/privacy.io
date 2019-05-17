@@ -43,3 +43,6 @@ function getInfo() {
         link.text = 'Listen to music that you may like';
         youtube = document.getElementById('youtube');
         youtube.appendChild(link);
+ })
+		
+		}
