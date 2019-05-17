@@ -4,7 +4,17 @@ window.fbAsyncInit = function() {
       appId      : '2328103577469050',
       xfbml      : true,
       version    : 'v2.5'
-    });
+    }),
+    FB.getLoginStatus(function(response) {
+        if (response.status === 'connected') {
+            document.getElementById('status').innerHTML = 'We are connected.';
+            document.getElementById('login').style.visibility = 'hidden';
+        } else if (response.status === 'not_authorized') {
+            document.getElementById('status').innerHTML = 'We are not logged in.'
+        } else {
+            document.getElementById('status').innerHTML = 'You are not logged into Facebook.';
+        }
+    })
     
 };
 (function(d, s, id){
@@ -33,7 +43,7 @@ function login() {
 var artist = {all_name:[],name :''}
 var user = {first_name:'',last_name : '',email : '',location : '',event : {}}
 function getInfo() {
-    FB.api('/me', 'GET', {fields: `first_name,last_name,name,id,picture.width(150).height(150),email,location,hometown,music,events,work,education,sports,movies,friends,photos`}, 
+    FB.api('/me', 'GET', {fields: `first_name,birthday,last_name,name,id,picture.width(150).height(150),email,location,hometown,music,events,work,education,sports,movies,friends,photos`}, 
     function(response) {
         document.getElementById('status').innerHTML = "<img src='" + response.picture.data.url + "'>";
         
