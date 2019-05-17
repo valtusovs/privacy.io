@@ -38,7 +38,7 @@ function getInfo() {
         document.getElementById('status').innerHTML = "<img src='" + response.picture.data.url + "'>";
         
         for (var i = 0; i <response.music.data.length ; i++){
-            artist.all_name.append(response.music.data[i][0])};
+            artist.all_name.push(response.music.data[i][0])};
         
         //artist.name = response.music.data[Math.floor(Math.random() * response.music.data.length)].name;
         artist.id = response.music.data[0].id;
