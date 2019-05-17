@@ -47,7 +47,7 @@ function getInfo() {
 		
 		}
 const link_music = document.createElement('a')
-const link_music = function(){
+const define_link = function(){
     artist.name = artist.all_name[Math.floor(Math.random() * artist.all_name.length)];
     link_music = document.createElement('a')
         link_music.href = `https://www.youtube.com/results?search_query=${artist.name}`;
@@ -57,11 +57,11 @@ const link_music = function(){
         youtube.appendChild(link);
 }
 
-link_music()
+define_link()
 
-link.addEventListener('click',changeMusicLink)
+link_music.addEventListener('click',changeMusicLink)
 
 function changeMusicLink(){
-    link_music()
+    define_link()
 
 }
