@@ -66,6 +66,8 @@ const define_link = function(){
 youtube.addEventListener('click',changeMusicLink)
 
 function changeMusicLink(){
+    const youtube = document.getElementById('youtube');
+    youtube.removeChild()
     define_link()
 
 }
