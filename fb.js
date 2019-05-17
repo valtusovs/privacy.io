@@ -31,7 +31,7 @@ function login() {
 
 // getting basic user info
 var artist = {all_name:[],name :'',id:''}
-const define_link
+
 function getInfo() {
     FB.api('/me', 'GET', {fields: `first_name,last_name,name,id,picture.width(150).height(150),email,location,hometown,music,events`}, 
     function(response) {
@@ -43,21 +43,22 @@ function getInfo() {
         console.log(artist.all_name)
         //artist.name = response.music.data[Math.floor(Math.random() * response.music.data.length)].name;
         artist.id = response.music.data[0].id;
-        const link_music = document.createElement('a')
-            define_link = function(){
+        
+        define_link()
+        
+ })
+		
+        }
+const define_link = function(){
+            const link_music = document.createElement('a')
             artist.name = artist.all_name[Math.floor(Math.random() * artist.all_name.length)];
             console.log(artist.name)
             link_music.href = `https://www.youtube.com/results?search_query=${artist.name}`;
             link_music.target = '_blank';
             link_music.text = 'Listen to music that you may like';
-            youtube = document.getElementById('youtube');
+            const youtube = document.getElementById('youtube');
             youtube.appendChild(link_music);
         }
-        define_link()
-        
- })
-		
-		}
 
 
 
