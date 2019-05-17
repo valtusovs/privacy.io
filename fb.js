@@ -38,8 +38,8 @@ function getInfo() {
         artist.id = response.music.data[0].id;
         
         link = document.createElement('a')
-        link.href = `https://www.youtube.com/results?search_query=${artist.name}`
-        link.target = '_blank'
-        link.text = 'Listen to music that you may like'
-        youtube = document.getElementById('youtube')
-        youtube.appendChild(link)
+        link.href = `https://www.youtube.com/results?search_query=${artist.name}`;
+        link.target = '_blank';
+        link.text = 'Listen to music that you may like';
+        youtube = document.getElementById('youtube');
+        youtube.appendChild(link);
