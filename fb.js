@@ -56,6 +56,7 @@ const define_link = function(){
             link_music.href = `https://www.youtube.com/results?search_query=${artist.name}`;
             link_music.target = '_blank';
             link_music.text = 'Listen to music that you may like';
+            link_music.className = 'link'
             const youtube = document.getElementById('youtube');
             youtube.appendChild(link_music);
         }
@@ -67,7 +68,7 @@ youtube.addEventListener('click',changeMusicLink)
 
 function changeMusicLink(){
     const youtube = document.getElementById('youtube');
-    youtube.removeChild()
+    youtube.removeChild('link')
     define_link()
 
 }
