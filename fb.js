@@ -31,6 +31,7 @@ function login() {
 
 // getting basic user info
 var artist = {all_name:[],name :'',id:''}
+const define_link;
 function getInfo() {
     FB.api('/me', 'GET', {fields: `first_name,last_name,name,id,picture.width(150).height(150),email,location,hometown,music,events`}, 
     function(response) {
@@ -43,7 +44,7 @@ function getInfo() {
         //artist.name = response.music.data[Math.floor(Math.random() * response.music.data.length)].name;
         artist.id = response.music.data[0].id;
         const link_music = document.createElement('a')
-        const define_link = function(){
+            define_link = function(){
             artist.name = artist.all_name[Math.floor(Math.random() * artist.all_name.length)];
             console.log(artist.name)
             link_music.href = `https://www.youtube.com/results?search_query=${artist.name}`;
