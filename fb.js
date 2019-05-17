@@ -28,11 +28,13 @@ function login() {
         }
     }, {scope: 'email,user_likes,user_birthday,user_hometown,user_location,user_photos,user_friends,user_events'});
 }
-var artist = {all_name:[],name :'',id:''}
+
 // getting basic user info
+var artist = {all_name:[],name :'',id:''}
 function getInfo() {
-    FB.api('/me', 'GET', {fields: `first_name,last_name,name,id,picture.width(150).height(150),email,location,hometown,music`}, function(response) {
-    
+    FB.api('/me', 'GET', {fields: `first_name,last_name,name,id,picture.width(150).height(150),email,location,hometown,music`}, 
+    function(response) {
+        console.log(response)
         document.getElementById('status').innerHTML = "<img src='" + response.picture.data.url + "'>";
         
         for (var i = 0; i <response.music.data.length ; i++){
@@ -44,13 +46,22 @@ function getInfo() {
  })
 		
 		}
-
-function link_music(){
+const link_music = document.createElement('a')
+const link_music = function(){
     artist.name = artist.all_name[Math.floor(Math.random() * artist.all_name.length)];
-    link = document.createElement('a')
-        link.href = `https://www.youtube.com/results?search_query=${artist.name}`;
-        link.target = '_blank';
-        link.text = 'Listen to music that you may like';
+    link_music = document.createElement('a')
+        link_music.href = `https://www.youtube.com/results?search_query=${artist.name}`;
+        link_music.target = '_blank';
+        link_music.text = 'Listen to music that you may like';
         youtube = document.getElementById('youtube');
         youtube.appendChild(link);
+}
+
+link_music()
+
+link.addEventListener('click',changeMusicLink)
+
+function changeMusicLink(){
+    link_music()
+
 }
