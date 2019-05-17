@@ -54,7 +54,7 @@ const define_link = function(){
         link_music.target = '_blank';
         link_music.text = 'Listen to music that you may like';
         youtube = document.getElementById('youtube');
-        youtube.appendChild(link);
+        youtube.appendChild(link_music);
 }
 
 define_link()
