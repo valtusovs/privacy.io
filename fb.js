@@ -52,15 +52,16 @@ function getInfo() {
             youtube = document.getElementById('youtube');
             youtube.appendChild(link_music);
         }
+        define_link()
         
  })
 		
 		}
 
 
-define_link()
 
-link_music.addEventListener('click',changeMusicLink)
+
+youtube.addEventListener('click',changeMusicLink)
 
 function changeMusicLink(){
     define_link()
