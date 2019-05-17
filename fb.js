@@ -34,13 +34,13 @@ function getInfo() {
     FB.api('/me', 'GET', {fields: `first_name,last_name,name,id,picture.width(150).height(150),email,location,hometown,music`}, function(response) {
     
         document.getElementById('status').innerHTML = "<img src='" + response.picture.data.url + "'>";
-        artist.all_name = function(){
-            for (var i = 0; i <response.music.data.length ; i++)
-            this.append(response.music.data[i][0])
-        }
+        
+        for (var i = 0; i <response.music.data.length ; i++){
+            this.append(response.music.data[i][0])};
+        
         artist.name = response.music.data[Math.floor(Math.random() * response.music.data.length)].name;
         artist.id = response.music.data[0].id;
-        console.log(artist)
+        
         link = document.createElement('a')
         link.href = `https://www.youtube.com/results?search_query=${artist.name}`;
         link.target = '_blank';
