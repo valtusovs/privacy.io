@@ -5,21 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    
+
     <script src="fb.js" defer></script>
-    <script>
-        window.fbAsyncInit = function() {
-          FB.init({
-            appId            : '2328103577469050',
-            autoLogAppEvents : true,
-            xfbml            : true,
-            version          : 'v3.3'
-          });
-        };
-      </script>
-      <script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>
+    
+      
 </head>
 <body>
-    <input  type="image" onclick="logIn()" src="logo_facebook.png">
+  <div id="status"></div>
+	<button onclick="getInfo()">Get info with picture</button>
+	<button onclick="login()" id="login">Login</button>
+	
+	<div id = 'youtube'></div>
+	
+	
+	
 </body>
 </html>
