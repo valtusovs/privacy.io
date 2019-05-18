@@ -5,19 +5,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+    <script src="https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyBJIIxwzBAh9gYQxuAPreAVeEquCD_dcqo
+    "
 
     <script src="fb.js" defer></script>
     
       
 </head>
-<body>
+
   <div id="status"></div>
 	<button onclick="getInfo()">Get info with picture</button>
 	<button onclick="login()" id="login">Login</button>
 	
 	<div id = 'youtube'></div>
-	
+	<style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    #map, #pano {
+      float: left;
+      height: 100%;
+      width: 50%;
+    }
+  </style>
+</head>
+
+  <div id="map"></div>
+  <div id="pano"></div>
+  <script>
+
+    function initialize() {
+      var fenway = {lat: 42.345573, lng: -71.098326};
+      var map = new google.maps.Map(document.getElementById('map'), {
+        center: fenway,
+        zoom: 14
+      });
+      var panorama = new google.maps.StreetViewPanorama(
+          document.getElementById('pano'), {
+            position: fenway,
+            pov: {
+              heading: 34,
+              pitch: 10
+            }
+          });
+      map.setStreetView(panorama);
+    }
+  </script>
+  <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initialize">
+  </script>
 	
 	
 </body>
