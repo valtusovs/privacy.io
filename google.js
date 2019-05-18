@@ -2,7 +2,7 @@
       // prompted by your browser. If you see the error "The Geolocation service
       // failed.", it means you probably did not give permission for the browser to
       // locate you.
-      const map, infoWindow,panorama;
+      var map, infoWindow,panorama;
       function initMap() {
         const base =  {lat: -34.397, lng: 150.644}
         map = new google.maps.Map(document.getElementById('map'), {
