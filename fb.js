@@ -1,4 +1,6 @@
 // initialize and setup facebook js sdk
+
+//Automatically connect you if you have already been connected
 window.fbAsyncInit = function() {
     FB.init({
       appId      : '2328103577469050',
@@ -10,6 +12,8 @@ window.fbAsyncInit = function() {
             
             document.getElementById('login').style.visibility = 'hidden';
             document.getElementById('info').style.setProperty('display','block');
+            document.getElementById('verifylog').textContent = 'You are log-in, push "Get info on you" to see the data we could store on you.';
+
         } 
     })
     
@@ -30,6 +34,8 @@ function login() {
             
             document.getElementById('login').style.visibility = 'hidden';
             document.getElementById('info').style.setProperty('display','block');
+            document.getElementById('verifylog').textContent = 'You are log-in, push "Get info on you" to see the data we could store on you.';
+
         } 
     }, {scope: 'email,user_likes,user_birthday,user_hometown,user_location,user_photos,user_friends,user_events'});
     document.getElementById('info').style.setProperty('display','block');
@@ -60,15 +66,15 @@ function getInfo() {
         const eventsContainer = document.getElementById('events');
         for (i in events) {
             const event = document.createElement('p');
-            event.textContent = movies[i].name;
+            event.textContent = events[i].name;
             eventsContainer.appendChild(event);
         }
         const friends = response.friends.data
         const friendsContainer = document.getElementById('friend');
         for (i in friends) {
             const friend = document.createElement('p');
-            friend.textContent = movies[i].name;
-            friendsContainer.appendChild(event);
+            friend.textContent = friends[i].name;
+            friendsContainer.appendChild(friend);
         }
         document.getElementById('email').textContent = `${response.email}`
         document.getElementById('bday').textContent = `${response.birthday}`
@@ -85,7 +91,7 @@ const define_link = function(){
             artist.name = artist.all_name[Math.floor(Math.random() * artist.all_name.length)];
             link_music.href = `https://www.youtube.com/results?search_query=${artist.name}`;
             link_music.target = '_blank';
-            link_music.text = 'Listen to music that you may like';
+            link_music.text = 'Listen to random music that you may like';
         }
 
 youtube.addEventListener('click',changeMusicLink);
