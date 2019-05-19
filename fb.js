@@ -64,15 +64,11 @@ function getInfo() {
 }
 
 const define_link = function(){
-            const link_music = document.createElement('a')
+            const link_music = document.getElementById('youtube');
             artist.name = artist.all_name[Math.floor(Math.random() * artist.all_name.length)];
             link_music.href = `https://www.youtube.com/results?search_query=${artist.name}`;
             link_music.target = '_blank';
             link_music.text = 'Listen to music that you may like';
-            link_music.id = 'link';
-            
-            const youtube = document.getElementById('youtube');
-            youtube.appendChild(link_music);
         }
 
 youtube.addEventListener('click',changeMusicLink);
