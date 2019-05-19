@@ -34,6 +34,9 @@ The idea of adding the possibility of logging in with Facebook was to show the u
 Feel free to use the account given above to actually log in to Facebook and verify the information the website is collecting. We are getting everything from Facebook, even the random music links are personalized to this account.
 We recommend you to use the login we provided because the Facebook app is private (i.e. it can currently only be used by the developer of the app). If you try logging in with your account instead of the one provided, you might get an error message. 
 
+## Location
+We are displaying two types of location information. The map on index.html shows you your location without requiring permission, simply from your ip-address. The second map on online-data-collection.html is far more accurate, requires explicit permission to access the location though.
+
 ## Libraries and resources used
 The code used to connect to Facebook was found in the Facebook developer documentation, just like the Google Maps API. We had to adapt both to fit our website perfectly.
 
