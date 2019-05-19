@@ -59,7 +59,7 @@ function getInfo() {
         document.getElementById('bday').textContent = `${response.birthday}`
         document.getElementById('name').textContent = `${response.name}`
         document.getElementById('location').textContent = `${response.location.name}`
-        console.log(reponse)
+        console.log(response)
         define_link();
         
     })
