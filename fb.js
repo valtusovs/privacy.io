@@ -41,7 +41,7 @@ function login() {
 
 // getting basic user info
 var artist = {all_name:[],name :''}
-var user = {first_name:'',last_name : '',email : '',location : '',event : {}}
+
 function getInfo() {
     FB.api('/me', 'GET', {fields: `first_name,birthday,last_name,name,id,picture.width(150).height(150),email,location,hometown,music,events,work,education,sports,movies,friends,photos`}, 
     function(response) {
