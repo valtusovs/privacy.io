@@ -156,6 +156,7 @@ br {
 }
 
 .infobox {
+    text-align: left;
     background-color: white;
     border: 1px solid rgb(202, 202, 202);
     padding: 0 20px 20px 20px;
