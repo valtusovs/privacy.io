@@ -1,5 +1,5 @@
       var map, infoWindow,panorama;
-      function initMap() {
+      const initMap = function()  {
         const base =  {lat: -34.397, lng: 150.644}
         map = new google.maps.Map(document.getElementById('map'), {
             center: base,
