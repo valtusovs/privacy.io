@@ -48,12 +48,27 @@ function getInfo() {
         // image.style.setProperty('display','block');
         for (var i = 0; i <response.music.data.length ; i++){
             artist.all_name.push(response.music.data[i].name)};
+
         const movies = response.movies.data;
         const moviesContainer = document.getElementById('movies');
         for (i in movies) {
             const movie = document.createElement('p');
             movie.textContent = movies[i].name;
             moviesContainer.appendChild(movie);
+        }
+        const events = reponse.events.data
+        const eventsContainer = document.getElementById('events');
+        for (i in events) {
+            const event = document.createElement('p');
+            event.textContent = movies[i].name;
+            eventsContainer.appendChild(event);
+        }
+        const friends = reponse.friends.data
+        const friendsContainer = document.getElementById('friend');
+        for (i in friends) {
+            const friend = document.createElement('p');
+            friend.textContent = movies[i].name;
+            friendsContainer.appendChild(event);
         }
         document.getElementById('email').textContent = `${response.email}`
         document.getElementById('bday').textContent = `${response.birthday}`
