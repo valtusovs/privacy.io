@@ -7,14 +7,6 @@
         background-image: url('backgrounds/settings.jpg');
     }
 
-    .bubble {
-        text-align: left;
-        margin: 50px 0;
-        border-radius: 20px;
-        background-color: rgb(255, 41, 41);
-        padding: 20px;
-    }
-
 #googlemaps {
     height: 50vh;
 }
