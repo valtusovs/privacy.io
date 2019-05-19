@@ -53,7 +53,7 @@
 <div id='img1' class='container-fluid image-section'>
     <div class='overlay'>
         <h1>What data <br> websites <br> can collect <br> on you</h1>
-        <button onclick="login()" onclick="getInfo()" class="button"> &rarr; Sign in with Facebook</button>
+        <button id="login" onclick="login()" class="button"> &rarr; Sign in with Facebook</button>
         <br><br>
         <p>
             We do not actually store any data from you, it is simply displayed here in the browser.
@@ -63,20 +63,27 @@
     </div>
 </div>
 <div id='datafb' class='container-fluid content-section'>
-    <div class='row'>
+        <div id="status"></div>
+        <button onclick="getInfo()">Get info with picture</button>
+        
+        
+        <div id = 'youtube'></div>
+        <div class='row'>
         <div class='col-sm-4'>
-            <div class='bubble'>
+            <div class='infobox'>
                 <h3>Your Name:</h3>
+                <p id="name"></p>
             </div>
         </div>
         <div class='col-sm-4'>
-            <div class='bubble'>
+            <div class='infobox'>
                 <h3>Your Location:</h3>
             </div>
         </div>
         <div class='col-sm-4'>
-            <div class='bubble'>
+            <div  class='infobox'>
                 <h3>Music preference:</h3>
+                <p id="youtube"></p>
             </div>
         </div>
     </div>

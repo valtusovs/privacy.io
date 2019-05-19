@@ -21,13 +21,16 @@ $.getJSON('https://ipapi.co/json/', function(data){
         infoWindow.open(map);
         map.setCenter(base);
       
-      console.log(data)
+        // set endpoint and your access key
+        
+        
+
+
+
     }
 );
 
-$.getJSON('https://ipapi.co/json/', function(data){
-  console.log(data)
-})
+
 
 
 
