@@ -41,7 +41,7 @@ function parallax2() {
 function scrollAnimation(){requestAnimationFrame(scrollWindowToContent)}
 
 function scrollWindowToContent() {
-    window.scrollBy(0,20);
+    window.scrollBy(0,50);
     if (window.scrollY < window.innerHeight) {
         scrollAnimation();
     }
