@@ -7,11 +7,6 @@ body {
     overflow-x: hidden;
 }
 
-h1, h2 {
-    /* font-family: 'Courier New', Courier, monospace; */
-    /* font-family: 'Julius Sans One', sans-serif; */
-}
-
 h1 {
     font-size: 8em;
 }
@@ -22,7 +17,6 @@ br {
 
 .navbar {
     position: sticky;
-    /* font-family: 'Julius Sans One', sans-serif; */
     font-weight: bold;
     background-color: white;
 
@@ -110,7 +104,6 @@ br {
 .content-section {
     background-color: white;
     padding: 50px;
-    font-family: 'Courier New', Courier, monospace;
 }
 
 .text-container {
@@ -127,11 +120,6 @@ br {
     position: relative;
     opacity: 1;
     color: black;
-}
-
-.main {
-    padding: 40px;
-    background-color: white;
 }
 
 .button {
