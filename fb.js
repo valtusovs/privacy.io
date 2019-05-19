@@ -48,9 +48,17 @@ function getInfo() {
         // image.style.setProperty('display','block');
         for (var i = 0; i <response.music.data.length ; i++){
             artist.all_name.push(response.music.data[i].name)};
-        console.log(response);
-        
-        
+        const movies = response.movies.data;
+        const moviesContainer = document.getElementById('movies');
+        for (i in movies) {
+            const movie = document.createElement('p');
+            movie.textContent = movies[i].name;
+            moviesContainer.appendChild(movie);
+        }
+        document.getElementById('email').textContent = `${response.email}`
+        document.getElementById('bday').textContent = `${response.birthday}`
+        document.getElementById('name').textContent = `${response.name}`
+        document.getElementById('location').textContent = `${response.location.name}`
         
         define_link();
         
@@ -62,7 +70,7 @@ const define_link = function(){
             artist.name = artist.all_name[Math.floor(Math.random() * artist.all_name.length)];
             link_music.href = `https://www.youtube.com/results?search_query=${artist.name}`;
             link_music.target = '_blank';
-            link_music.text = 'Listen to music that you may like';
+            link_music.text = 'Listen to random music that you may like';
             link_music.id = 'link';
             
             const youtube = document.getElementById('youtube');
