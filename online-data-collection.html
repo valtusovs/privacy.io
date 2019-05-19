@@ -9,8 +9,8 @@
     <!-- custom styling -->
     <link rel='stylesheet' type='text/css' href='style.css'>
     <link rel='stylesheet' type='text/css' href='online-data-collection.css'>
-    <link rel='stylesheet' type='text/css' href='online-data-collection.css'>
     <link rel="stylesheet" type="text/css" href="google.css"/>
+    <link rel="stylesheet" type="text/css" href="fb.css"/>
     
     
     <!-- required for google maps -->
@@ -62,40 +62,71 @@
         <!-- maybe change background image (with id='img1') to your profile picture or cover photo -->
     </div>
 </div>
-<div id='datafb' class='container-fluid content-section'>
-        <div id="status"></div>
-        <button onclick="getInfo()">Get info with picture</button>
-        
-        
-        <div id = 'youtube'></div>
-        <div class='row'>
-        <div class='col-sm-4'>
-            <div class='infobox'>
-                <h3>Your Name:</h3>
-                <p id="name"></p>
+<div class='container-fluid content-section'>
+    <div class='text-container'>
+        <button class='button' onclick="getInfo()">Get info with picture</button>
+
+        <div class='datafb'>
+            <div id="status"></div>
+            
+            <div class='row'>
+                <div class='col-sm-4'>
+                    <div class='infobox'>
+                        <h3>Your Name:</h3>
+                        <p id="name"></p>
+                    </div>
+                </div>
+                <div class='col-sm-4'>
+                    <div class='infobox'>
+                        <h3>Your email:</h3>
+                        <p id='email'></p>
+                    </div>
+                </div>
+                <div class='col-sm-4'>
+                    <div  class='infobox'>
+                        <h3>Birthday:</h3>
+                        <p id="bday"></p>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class='col-sm-4'>
-            <div class='infobox'>
-                <h3>Your Location:</h3>
+
+            <div class='row'>
+                <div class='col-sm-4'>
+                    <div class='infobox'>
+                        <h3>Events:</h3>
+                        <p id="events"></p>
+                    </div>
+                </div>
+                <div class='col-sm-4'>
+                    <div class='infobox'>
+                        <h3>Best friend:</h3>
+                        <p id='friend'></p>
+                    </div>
+                </div>
+                <div class='col-sm-4'>
+                    <div  class='infobox'>
+                        <h3>Location:</h3>
+                        <p id="location"></p>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class='col-sm-4'>
-            <div  class='infobox'>
-                <h3>Music preference:</h3>
-                <p id="youtube"></p>
+
+            <div class='row'>
+                <div class='col-sm-4'></div>
+                <div class='col-sm-4'>
+                    <div class='infobox'>
+                        <h3>Movies:</h3>
+                        <p id="movies"></p>
+                    </div>
+                </div>
             </div>
+            <div id='youtube'></div>
         </div>
+        <hr>
+        <button onclick="initMap()" class="button"> Get Your localisation</button>
     </div>
 </div>
-<div id="button-map">
-        
-        
-<button onclick="initMap()" class="button"> Get Your localisation</button>
-</div>
 <div id='googlemaps' class=container-fluid>
-    
-    
     <div id='map'></div>
     <div id='pano'></div>
 </div>

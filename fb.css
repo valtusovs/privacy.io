@@ -1,0 +1,21 @@
+#status {
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    background-color: rgb(91, 91, 255);
+    ;
+    margin: auto;
+    margin-bottom: 50px;
+    /* display: none; */
+}
+
+#youtube {
+    margin: auto;
+}
+
+#youtube .button {
+    background-color: rgb(91, 91, 255);
+    padding: 10px;
+    color: white;
+    border-radius: 50px;
+}

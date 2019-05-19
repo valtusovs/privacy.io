@@ -45,33 +45,34 @@ var user = {first_name:'',last_name : '',email : '',location : '',event : {}}
 function getInfo() {
     FB.api('/me', 'GET', {fields: `first_name,birthday,last_name,name,id,picture.width(150).height(150),email,location,hometown,music,events,work,education,sports,movies,friends,photos`}, 
     function(response) {
-        document.getElementById('status').innerHTML = "<img src='" + response.picture.data.url + "'>";
-        
+        const image = document.getElementById('status')
+        image.innerHTML = "<img src='" + response.picture.data.url + "'>";
+        image.style.setProperty('display','block');
         for (var i = 0; i <response.music.data.length ; i++){
             artist.all_name.push(response.music.data[i].name)};
-        console.log(response)
-        console.log(user)
+        console.log(response);
+        console.log(user);
         
         
-        define_link()
+        define_link();
         
- })
-		
-        }
+    })
+}
+
 const define_link = function(){
             const link_music = document.createElement('a')
             artist.name = artist.all_name[Math.floor(Math.random() * artist.all_name.length)];
             link_music.href = `https://www.youtube.com/results?search_query=${artist.name}`;
             link_music.target = '_blank';
             link_music.text = 'Listen to music that you may like';
-            link_music.id = 'link'
-            link_music.className = 'button'
+            link_music.id = 'link';
+            link_music.className = 'button';
             
             const youtube = document.getElementById('youtube');
             youtube.appendChild(link_music);
         }
 
-youtube.addEventListener('click',changeMusicLink)
+youtube.addEventListener('click',changeMusicLink);
 
 function changeMusicLink(){
     const youtube = document.getElementById('youtube');
