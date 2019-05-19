@@ -15,6 +15,7 @@ window.fbAsyncInit = function() {
             document.getElementById('status').innerHTML = 'You are not logged into Facebook.';
         }
     })
+    document.getElementById('info').style.setProperty('display','block');
     
 };
 (function(d, s, id){
@@ -37,6 +38,7 @@ function login() {
             document.getElementById('status').innerHTML = 'You are not logged into Facebook.';
         }
     }, {scope: 'email,user_likes,user_birthday,user_hometown,user_location,user_photos,user_friends,user_events'});
+    document.getElementById('info').style.setProperty('display','block');
 }
 
 // getting basic user info
