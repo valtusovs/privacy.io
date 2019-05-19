@@ -6,9 +6,11 @@ $.getJSON('https://ipapi.co/json/', function(data){
         // output the "calling_code" object inside "location"
         
         
+        const ip = document.getElementById('ip')
+        ip.textContent += `${data.ip}`
         
         const base =  {lat: data.latitude, lng: data.longitude}
-        map = new google.maps.Map(document.getElementById('map'), {
+        map = new google.maps.Map(document.getElementById('map_ip'), {
             center: base,
             zoom: 10
         });
