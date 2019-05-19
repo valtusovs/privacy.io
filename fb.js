@@ -60,15 +60,15 @@ function getInfo() {
         const eventsContainer = document.getElementById('events');
         for (i in events) {
             const event = document.createElement('p');
-            event.textContent = movies[i].name;
+            event.textContent = events[i].name;
             eventsContainer.appendChild(event);
         }
         const friends = response.friends.data
         const friendsContainer = document.getElementById('friend');
         for (i in friends) {
             const friend = document.createElement('p');
-            friend.textContent = movies[i].name;
-            friendsContainer.appendChild(event);
+            friend.textContent = friends[i].name;
+            friendsContainer.appendChild(friend);
         }
         document.getElementById('email').textContent = `${response.email}`
         document.getElementById('bday').textContent = `${response.birthday}`
