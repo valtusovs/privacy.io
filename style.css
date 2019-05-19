@@ -78,7 +78,7 @@ br {
 
 /* BACKGROUND IMAGES */
     .image-section {
-        height: 100vh;
+        min-height: 100vh;
         background-color: black;
         color: white;
         text-align: right;
@@ -87,6 +87,7 @@ br {
         background-position: center;
         background-attachment: fixed;
         padding: 0;
+        overflow: hidden;
     }
 
     .overlay {
@@ -136,14 +137,14 @@ br {
 .button {
     margin-top: 500px;
     background-color: rgb(27, 146, 33);
-    padding: 20px 50px;
-    font-size: 2em;
+    padding: 15px 30px;
+    font-size: 1.5em;
     text-decoration: none;
     color: white;
     position: relative;
-    border-radius: 10px;
+    border-radius: 40px;
     transition: background-color .5s;
-
+    margin: 50px 0;
 }
 
 .button:hover {
