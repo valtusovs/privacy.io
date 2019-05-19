@@ -31,13 +31,6 @@ function parallax() {
     // title.style.setProperty('top',`${newtoptitle}px`);
 }
 
-function parallax2() {
-    console.log(window.scrollY);
-    const pos = 200 - window.scrollY/5;
-    // img1.style.backgroundPositionY = `${pos}px`;
-
-}
-
 function scrollAnimation(){requestAnimationFrame(scrollWindowToContent)}
 
 function scrollWindowToContent() {
