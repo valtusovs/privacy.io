@@ -6,11 +6,14 @@
         
         // Try HTML5 geolocation.
         if (navigator.geolocation) {
+          
           navigator.geolocation.getCurrentPosition(function(position) {
             var pos = {
               lat: position.coords.latitude,
               lng: position.coords.longitude
             };
+            const block = document.getElementById('googlemaps')
+            block.style.display = 'block'
             map = new google.maps.Map(document.getElementById('map'), {
               center: pos,
             zoom: 6
@@ -37,6 +40,7 @@
           // Browser doesn't support Geolocation
           handleLocationError(false, infoWindow, map.getCenter());
         }
+        
       }
 
       function handleLocationError(browserHasGeolocation, infoWindow, pos) {
