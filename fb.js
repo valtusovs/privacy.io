@@ -70,7 +70,6 @@ const define_link = function(){
             link_music.target = '_blank';
             link_music.text = 'Listen to music that you may like';
             link_music.id = 'link';
-            link_music.className = 'button';
             
             const youtube = document.getElementById('youtube');
             youtube.appendChild(link_music);

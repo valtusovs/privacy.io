@@ -17,9 +17,10 @@
     margin: auto;
 }
 
-#youtube {
+#link {
     background-color: rgb(91, 91, 255);
     padding: 10px;
     color: white;
+    text-decoration: none;
     border-radius: 50px;
 }
