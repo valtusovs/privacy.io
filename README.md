@@ -1,31 +1,45 @@
 # CSE104 Website
+by Noah Sarfati and William Koch. May 19, 2019
 
-Project for the CSE104 course. The goal is to develop a website using HTML, CSS and Javascript
+View project on [Github](https://github.com/NoahSfi/privacy.io).
 
-## Ideas
-- Polls and Surveys
-- Hill Climb Racing
+## Facebook account
+Please use this account when clicking on "sign in with Facebook" (details in project description):
 
-# Interesting Libraries
-- React
-- Semantic UI
+email:      privacy.cs104@gmail.com
 
-# Final Project idea
-## Project outline
-Our final project will be to create a website for the **Privacy Committee** (soon X-Privacy). The goal of this website will be to have a calendar showing our events, having one site that explains why privacy online is important and another one which covers more private alternatives to many online services. 
-Maybe we'll have one page comparing all different types of messaging services.
-The following shall be added later:
-- We will have one webpage which displays to you all the websites you have visited before coming here, and all other kinds of information we can collect about you (browser size, operating system, ip address -> location). We might have to implement Google services for this (we will see about this later).
+password:   bonjour123
 
-## Details
-The website will be structured as follows:
+## Goals and Project Outline
+Our initial project was to create a game similar to Hill Climb Racing. After several weeks of reading libraries that would allow us to use some physics, we decided that we might not have sufficient time to successfully complete this ambitious project. We therefore changed our plan to something more achievable for the given timeframe.
+
+We finally decided on creating a website for the Privacy Committee (to be renamed as X-Privacy) of Polytechnique. Focusing on the HTML/CSS and Javascript part of the website, we did not focus on filling the entire website with actual content but used lorem ipsum for certain parts.
+
+## Website Overview
+The website has 5 pages:
 - Home
 - Our Goals
-- Online Data Collection
 - Importance of Privacy
+- Online Data Collection
 - Alternatives
-- Events
-- Contact us
 
-### Home
-This page will introduce the Privacy Committee - maybe add the latest posts here. Shall there be a title image?
+The general structure of the individual pages is fairly similar, except for the home page where we added some additional Javascript for the home page (blur and parallax scroll effect). 
+
+The website is mobile friendly in large parts, even logging in to Facebook and displaying the personal information works fine. Displaying your current location does not work on iPhone though.
+
+We have hosted our website on [Github](https://noahsfi.github.io/privacy.io) since we needed a server to create a Facebook app, allowing you to login with your Facebook account.
+
+## Facebook Login
+The idea of adding the possibility of logging in with Facebook was to show the user what type of information they are giving to websites where they sign in with their Facebook accout. The goal is to show that it is generally better to create a new account for each website to minimize the information the website can get from you (which could give you cheaper prices for example).
+Feel free to use the account given above to actually log in to Facebook and verify the information the website is collecting. We are getting everything from Facebook, even the random music links are personalized to this account.
+We recommend you to use the login we provided because the Facebook app is private (i.e. it can currently only be used by the developer of the app). If you try logging in with your account instead of the one provided, you might get an error message. 
+
+## Location
+We are displaying two types of location information. The map on index.html shows you your location without requiring permission, simply from your ip-address. The second map on online-data-collection.html is far more accurate, requires explicit permission to access the location though.
+
+## Libraries and resources used
+The code used to connect to Facebook was found in the Facebook developer documentation, just like the Google Maps API. We had to adapt both to fit our website perfectly.
+
+We used Bootstrap CSS to skip some basic redundant styling. This was used for the full-width containers, as well as for creating a table faster.
+
+We had to search through Stackoverflow and the W3Schools website for topics we had no knowledge on. 
