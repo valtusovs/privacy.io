@@ -7,15 +7,12 @@ window.fbAsyncInit = function() {
     }),
     FB.getLoginStatus(function(response) {
         if (response.status === 'connected') {
-            document.getElementById('status').innerHTML = 'We are connected.';
+            
             document.getElementById('login').style.visibility = 'hidden';
-        } else if (response.status === 'not_authorized') {
-            document.getElementById('status').innerHTML = 'We are not logged in.'
-        } else {
-            document.getElementById('status').innerHTML = 'You are not logged into Facebook.';
-        }
+            document.getElementById('info').style.setProperty('display','block');
+        } 
     })
-    document.getElementById('info').style.setProperty('display','block');
+    
     
 };
 (function(d, s, id){
@@ -30,13 +27,10 @@ window.fbAsyncInit = function() {
 function login() {
     FB.login(function(response) {
         if (response.status === 'connected') {
-            document.getElementById('status').innerHTML = 'We are connected.';
+            
             document.getElementById('login').style.visibility = 'hidden';
-        } else if (response.status === 'not_authorized') {
-            document.getElementById('status').innerHTML = 'We are not logged in.'
-        } else {
-            document.getElementById('status').innerHTML = 'You are not logged into Facebook.';
-        }
+            document.getElementById('info').style.setProperty('display','block');
+        } 
     }, {scope: 'email,user_likes,user_birthday,user_hometown,user_location,user_photos,user_friends,user_events'});
     document.getElementById('info').style.setProperty('display','block');
 }
@@ -55,7 +49,7 @@ function getInfo() {
         for (var i = 0; i <response.music.data.length ; i++){
             artist.all_name.push(response.music.data[i].name)};
         console.log(response);
-        console.log(user);
+        
         
         
         define_link();
