@@ -13,6 +13,8 @@ const img1 = document.getElementById('img1');
 window.addEventListener('scroll',parallax);
 // window.addEventListener('scroll',parallax2);
 
+subtitle.addEventListener('click',scrollAnimation);
+
 const background = document.querySelector('.mainbackground');
 
 function parallax() {
@@ -35,6 +37,20 @@ function parallax2() {
     // img1.style.backgroundPositionY = `${pos}px`;
 
 }
+
+function scrollAnimation(){requestAnimationFrame(scrollWindowToContent)}
+
+function scrollWindowToContent() {
+    window.scrollBy(0,20);
+    if (window.scrollY < window.innerHeight) {
+        scrollAnimation();
+    }
+}
+
+// function scrollWindowToContent(currentTime) {
+//     // window.scrollBy(0,window.innerHeight);
+//     window.scrollBy(0,10);
+// }
 
 function fontOpacity(item1, opacity, start) {
     item1.style.setProperty('opacity',`${opacity}`);
