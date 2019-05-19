@@ -56,14 +56,14 @@ function getInfo() {
             movie.textContent = movies[i].name;
             moviesContainer.appendChild(movie);
         }
-        const events = reponse.events.data
+        const events = response.events.data
         const eventsContainer = document.getElementById('events');
         for (i in events) {
             const event = document.createElement('p');
             event.textContent = movies[i].name;
             eventsContainer.appendChild(event);
         }
-        const friends = reponse.friends.data
+        const friends = response.friends.data
         const friendsContainer = document.getElementById('friend');
         for (i in friends) {
             const friend = document.createElement('p');
