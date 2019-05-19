@@ -3,7 +3,7 @@
     height: 200px;
     border-radius: 100px;
     background-color: rgb(91, 91, 255);
-    ;
+    background-size: cover;
     margin: auto;
     margin-bottom: 50px;
     /* display: none; */

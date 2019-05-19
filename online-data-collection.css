@@ -16,7 +16,7 @@
 }
 
 #datafb {
-    display: block;
+    display: none;
 }
 
 @media (max-width: 826px) {

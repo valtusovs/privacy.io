@@ -46,8 +46,10 @@ function getInfo() {
     FB.api('/me', 'GET', {fields: `first_name,birthday,last_name,name,id,picture.width(150).height(150),email,location,hometown,music,events,work,education,sports,movies,friends,photos`}, 
     function(response) {
         const image = document.getElementById('status')
-        image.innerHTML = "<img src='" + response.picture.data.url + "'>";
-        image.style.setProperty('display','block');
+        image.style.setProperty('background-image',`url(${response.picture.data.url})`);
+        document.getElementById('datafb').style.setProperty('display','block');
+        // image.innerHTML = "<img src='" + response.picture.data.url + "'>";
+        // image.style.setProperty('display','block');
         for (var i = 0; i <response.music.data.length ; i++){
             artist.all_name.push(response.music.data[i].name)};
         console.log(response);
