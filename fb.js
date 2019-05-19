@@ -85,7 +85,7 @@ const define_link = function(){
             artist.name = artist.all_name[Math.floor(Math.random() * artist.all_name.length)];
             link_music.href = `https://www.youtube.com/results?search_query=${artist.name}`;
             link_music.target = '_blank';
-            link_music.text = 'Listen to music that you may like';
+            link_music.text = 'Listen to random music that you may like';
         }
 
 youtube.addEventListener('click',changeMusicLink);
