@@ -3,10 +3,18 @@
         background-image: url('backgrounds/accounts-blur-button-267350.jpg');
     }
 
+    #img1 h1 {
+        font-size: 5em;
+    }
+
     #img2 {
         background-image: url('backgrounds/settings.jpg');
     }
 
 #googlemaps {
     height: 50vh;
+}
+
+@media (max-width: 826px) {
+    #img1 h1 {font-size:10vw}
 }

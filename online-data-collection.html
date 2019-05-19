@@ -11,8 +11,7 @@
     <link rel='stylesheet' type='text/css' href='online-data-collection.css'>
     <link rel='stylesheet' type='text/css' href='online-data-collection.css'>
     <link rel="stylesheet" type="text/css" href="google.css"/>
-    <!-- required for Bootstrap -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> 
+    
     
     <!-- required for google maps -->
     <script async defer
@@ -22,6 +21,7 @@
     <!-- custom script -->
     <script src="script.js" defer></script>
     <script src="google.js" defer></script>
+    <script src="fb.js" defer></script>
 </head>
 
 <body>
@@ -54,7 +54,7 @@
 <div id='img1' class='container-fluid image-section'>
     <div class='overlay'>
         <h1>What data <br> websites <br> can collect <br> on you</h1>
-        <a class='button' href='#'>&rarr; Sign in with Facebook</a>
+        <button onclick="login()" class="button"> &rarr; Sign in with Facebook</button>
         <br><br>
         <p>
             We do not actually store any data from you, it is simply displayed here in the browser.
@@ -83,7 +83,7 @@
 <div id="button-map">
         
         
-        <button onclick="initMap()" class="button"> Get Your localisation</button>
+<button onclick="initMap()" class="button"> Get Your localisation</button>
 </div>
 <div id='googlemaps' class=container-fluid>
     
