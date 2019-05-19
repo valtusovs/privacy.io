@@ -15,12 +15,14 @@
 
 #youtube {
     margin: auto;
-}
-
-#link {
     background-color: rgb(91, 91, 255);
-    padding: 10px;
+    padding: 10px 20px;
     color: white;
     text-decoration: none;
     border-radius: 50px;
+}
+
+#link {
+    text-align: center;
+    margin-top: 20px;
 }
