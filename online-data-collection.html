@@ -11,8 +11,7 @@
     <link rel='stylesheet' type='text/css' href='online-data-collection.css'>
     <link rel='stylesheet' type='text/css' href='online-data-collection.css'>
     <link rel="stylesheet" type="text/css" href="google.css"/>
-    <!-- required for Bootstrap -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> 
+    
     
     <!-- required for google maps -->
     <script async defer
@@ -20,7 +19,6 @@
     </script>
 
     <!-- custom script -->
-    <script src="script.js" defer></script>
     <script src="google.js" defer></script>
     <script src="fb.js" defer></script>
 </head>
@@ -55,28 +53,30 @@
 <div id='img1' class='container-fluid image-section'>
     <div class='overlay'>
         <h1>What data <br> websites <br> can collect <br> on you</h1>
-        <a class='button' onclick="login()">&rarr; Sign in with Facebook</a>
+        <button onclick="login()" onclick="getInfo()" class="button"> &rarr; Sign in with Facebook</button>
         <br><br>
         <p>
             We do not actually store any data from you, it is simply displayed here in the browser.
         </p>
         <!-- create the following divs after login to display the information -->
         <!-- maybe change background image (with id='img1') to your profile picture or cover photo -->
-        <div class='row'>
-            <div class='col-sm-4'>
-                <div class='bubble'>
-                    <h3>Your Name:</h3>
-                </div>
+    </div>
+</div>
+<div id='datafb' class='container-fluid content-section'>
+    <div class='row'>
+        <div class='col-sm-4'>
+            <div class='bubble'>
+                <h3>Your Name:</h3>
             </div>
-            <div class='col-sm-4'>
-                <div class='bubble'>
-                    <h3>Your Location:</h3>
-                </div>
+        </div>
+        <div class='col-sm-4'>
+            <div class='bubble'>
+                <h3>Your Location:</h3>
             </div>
-            <div class='col-sm-4'>
-                <div class='bubble'>
-                    <h3>Music preference:</h3>
-                </div>
+        </div>
+        <div class='col-sm-4'>
+            <div class='bubble'>
+                <h3>Music preference:</h3>
             </div>
         </div>
     </div>
@@ -84,7 +84,7 @@
 <div id="button-map">
         
         
-        <button onclick="initMap()" class="button"> Get Your localisation</button>
+<button onclick="initMap()" class="button"> Get Your localisation</button>
 </div>
 <div id='googlemaps' class=container-fluid>
     
