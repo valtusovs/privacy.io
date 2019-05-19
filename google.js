@@ -11,7 +11,11 @@
               lat: position.coords.latitude,
               lng: position.coords.longitude
             };
-
+            map = new google.maps.Map(document.getElementById('map'), {
+              center: pos,
+            zoom: 6
+            });
+            infoWindow = new google.maps.InfoWindow;
             infoWindow.setPosition(pos);
             infoWindow.setContent('Location found.');
             infoWindow.open(map);
