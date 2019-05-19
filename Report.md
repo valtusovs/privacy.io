@@ -7,6 +7,7 @@ View project on [Github](https://github.com/NoahSfi/privacy.io).
 Please use this account when clicking on "sign in with Facebook" (details in project description):
 
 email:      privacy.cs104@gmail.com
+
 password:   bonjour123
 
 ## Goals and Project Outline
