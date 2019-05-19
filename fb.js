@@ -1,4 +1,6 @@
 // initialize and setup facebook js sdk
+
+//Automatically connect you if you have already been connected
 window.fbAsyncInit = function() {
     FB.init({
       appId      : '2328103577469050',
@@ -10,6 +12,8 @@ window.fbAsyncInit = function() {
             
             document.getElementById('login').style.visibility = 'hidden';
             document.getElementById('info').style.setProperty('display','block');
+            document.getElementById('verifylog').textContent = 'You are log-in, push "Get info on you" to see the data we could store on you';
+
         } 
     })
     
@@ -30,6 +34,8 @@ function login() {
             
             document.getElementById('login').style.visibility = 'hidden';
             document.getElementById('info').style.setProperty('display','block');
+            document.getElementById('verifylog').textContent = 'You are log-in, push "Get info on you" to see the data we could store on you';
+
         } 
     }, {scope: 'email,user_likes,user_birthday,user_hometown,user_location,user_photos,user_friends,user_events'});
     document.getElementById('info').style.setProperty('display','block');
